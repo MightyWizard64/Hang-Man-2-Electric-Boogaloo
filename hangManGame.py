@@ -39,7 +39,7 @@ hangList = [
 '''
   +---+
   O   |
-  |\\ |
+  |\\  |
   |   |
       |
       |
@@ -49,7 +49,7 @@ hangList = [
 '''
   +---+
   O   |
- /|\\ |
+ /|\\  |
   |   |
       |
       |
@@ -59,7 +59,7 @@ hangList = [
 '''
   +---+
   O   |
- /|\\ |
+ /|\\  |
   |   |
  /    |
       |
@@ -69,33 +69,26 @@ hangList = [
 '''
   +---+
   O   |
- /|\\ |
+ /|\\  |
   |   |
- / \\ |
+ / \\  |
       |
     ===
 '''
 ]
+
 secretWord = ["halloween","candy","costume","scare","monster"]
-randomWord = random.choice(secretWord)
-letterList = list(randomWord)
-print(letterList)
-secret = []
+mystery = random.choice(secretWord)
+mystery = list(mystery)
+guessList = list("____________")
 misses = 0
 
-while misses < 7:
-	print(hangList[misses])
-	guess = input("Choose a letter: ")
-	if guess in letterList:
-
-		print("You guessed the word")
-	else:
-		misses += 1
-
-
-if misses == 7:
-	print("Game Over")
-
+while misses > 7:
+  print(hangList)
+  print("Welcome to hangman")
+  print(guessList)
+  guess = ("Guess a letter: ")
+  index = 0
 
 
 
